@@ -1,0 +1,11 @@
+.head-content {
+    position: relative;
+ }
+ .header-text {
+    color: #fff;
+    position: absolute;
+    right: 50%;
+    left: 0;
+    bottom: 50%;
+ }
+ 

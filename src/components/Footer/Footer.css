@@ -1,0 +1,11 @@
+
+.footer{
+    background: #2a3947;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.social-menu li{
+    margin-left: 10px;
+    font-size: 18px;
+}
