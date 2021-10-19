@@ -10,10 +10,14 @@ import Register from './components/Login/Register';
 import NotFound from './components/NotFound/NotFound';
 import Services from './components/Services/Services';
 import Footer from './components/Footer/Footer';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
       <Header></Header>
       <Switch>
@@ -30,7 +34,7 @@ function App() {
           <About></About>
         </Route>
 
-        <Route exact path="/service">
+        <Route path="/service">
           <Services></Services>
         </Route>
 
@@ -45,13 +49,18 @@ function App() {
         <Route path="/register">
           <Register></Register>
         </Route> 
+        <Route path="/contact">
+          <Contact></Contact>
+        </Route> 
 
         <Route path="*">
           <NotFound></NotFound>
         </Route>
       </Switch>
-      <Footer></Footer>
+      <Footer> </Footer>
       </BrowserRouter>
+      </AuthProvider>
+
     </div>
   );
 }

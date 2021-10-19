@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 
 const Navbar = () => {
+    const{user, logOut}=useAuth()
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
@@ -27,10 +29,16 @@ const Navbar = () => {
                     <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
             </ul>
-            <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button className="btn btn-outline-success" type="submit">Login</button>
-            </form>
+            <div className="d-flex">
+                <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
+                <button className="btn btn-outline-success me-2" type="submit" >Search</button>
+
+                {
+                    user.email ?
+                        <button onClick={logOut}>logout</button>
+                        :
+                        <NavLink to="/login">Login</NavLink>}
+            </div>
             </div>
         </div>
         </nav>

@@ -1,0 +1,15 @@
+
+
+.about-title{
+    background: rgb(17, 17, 63);
+    padding: 50px;
+    color: #fff;
+}
+
+.doc-data h5{
+    font-size: 25px;
+}
+.doc-data p{
+    font-size: 20px;
+    color: rgb(81, 236, 241);
+}

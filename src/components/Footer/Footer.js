@@ -5,7 +5,7 @@ import img from '../../images/payment-gateway.jpg'
 
 const Footer = () => {
     return (
-        <div className="footer text-white">
+        <div className="footer text-white ">
             <div className="container">
             <div className="row">
                 <div className="col-lg-4 text-start">
