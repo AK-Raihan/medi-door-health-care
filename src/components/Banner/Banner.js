@@ -9,48 +9,51 @@ const Banner = () => {
         <main >
             <div className="row">
                 <div className="col">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active head-content" style={{height:'850px'}}>
+                <div className="carousel-inner">
+                    <div className="carousel-item active head-content banner-carousel " >
                         <div className="header-img">
-                        <img src={banner1} class="d-block w-100" alt="..."/>
+                        <img src={banner1} className="d-block w-100" alt="..."/>
                         </div>
                         <div className="header-text">
                             <h5 className="fs-bold">Welcome to MediDoor</h5>
-                            <h1>PROVIDING BEST <br /> <span className="text-info">MEDICAL</span> CARE</h1>
+                            <h2>PROVIDING BEST <br /> <span className="text-info">MEDICAL</span> CARE</h2>
+                            <button className="btn btn-outline-info mt-3">Book your seasson</button>
                         </div>
                     </div>
-                    <div class="carousel-item" style={{height:'850px'}}>
+                    <div className="carousel-item banner-carousel" >
                     <div className="header-img">
-                        <img src={banner2} class="d-block w-100" alt="..."/>
+                        <img src={banner2} className="d-block w-100" alt="..."/>
                         </div>
                         <div className="header-text">
                         <h5 className="fs-bold">Trusted & Reliable</h5>
-                        <h1>Better <span className="text-info">Healthcare</span> <br /> for the World</h1>
+                        <h2>Better <span className="text-info">Healthcare</span> <br /> for the World</h2>
+                        <button className="btn btn-outline-info mt-3">Book your seasson</button>
                         </div>
                     </div>
-                    <div class="carousel-item" style={{height:'850px'}}>
+                    <div className="carousel-item banner-carousel" >
                        <div className="header-img">
-                        <img src={banner3} class="d-block w-100" alt="..."/>
+                        <img src={banner3} className="d-block w-100" alt="..."/>
                         </div>
                         <div className="header-text">
                         <h5 className="fs-bold">Download and register <br /> on our app for free and feel safe for all your family</h5>
-                        <h1>Instant <span className="text-info">video consultation</span> <br /> from the best Doctors</h1>
+                        <h2>Instant <span className="text-info">video consultation</span> <br /> from the best Doctors</h2>
+                        <button className="btn btn-outline-info mt-3">Book your seasson</button>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
                 </button>
             </div>
                 </div>

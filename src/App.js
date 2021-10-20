@@ -13,6 +13,7 @@ import Footer from './components/Footer/Footer';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Contact from './components/Contact/Contact';
+import FindDoctor from './components/FindDoctor/FindDoctor';
 
 function App() {
   return (
@@ -37,6 +38,10 @@ function App() {
         <Route path="/service">
           <Services></Services>
         </Route>
+        <Route path="/doctor">
+          <FindDoctor></FindDoctor>
+        </Route>
+        
 
         <Route path="/depertment">
           <Depertment></Depertment>

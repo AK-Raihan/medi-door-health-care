@@ -4,20 +4,22 @@ import { getAuth,
     signInWithPopup,
     GoogleAuthProvider,
     onAuthStateChanged,
-    signOut } from "firebase/auth";
+    signOut,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword } from "firebase/auth";
 
 
 
-
+initializeFirebase()
 
 const useFirebase= ()=>{
-    initializeFirebase()
-    const [user, setUser]= useState({})
-    const [error, setError]= useState('')
+    const [user, setUser]= useState({});
+    const [error, setError]= useState('');
+    const[isloading, setIsLoading]= useState(true);
 
 
     const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider();
 
     const signInUsingGoogle= ()=>{
         signInWithPopup(auth, googleProvider)
@@ -26,37 +28,60 @@ const useFirebase= ()=>{
           // console.log(result.user);
           setError("");
         })
-        .catch((error) => setError(error.message));
+        .finally(() => setIsLoading(false));
     }
 
     // observe
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubcribed= onAuthStateChanged(auth, (user) => {
           if (user) {
             setUser(user);
-            const uid = user.uid;
           } else {
-            // User is signed out
-            // ...
+            setUser({})
           }
+          setIsLoading(false)
         });
+        return ()=>unsubcribed;
       }, []);
 
       const logOut = ()=>{
+        setIsLoading(true)
           signOut(auth)
           .then(() => {
             setUser({});
           })
+          .finally(() => setIsLoading(false));
+      };
+
+      const handleUserRegister = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((result) => {
+            console.log(result.user);
+            setUser(result.user);
+          })
           .catch((error) => {
-            setError(error);
+            setError(error.message);
           });
-      }
+      };
+
+      const handleUserLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+          .then((result) => {
+            console.log(result.user);
+            setUser(result.user);
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
+      };
     
 
       return{
           user,
           signInUsingGoogle,
-          logOut
+          logOut,
+          handleUserRegister,
+          handleUserLogin
       }
 
 

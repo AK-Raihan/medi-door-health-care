@@ -14,9 +14,9 @@ const Contact = () => {
                             <div className="contact-address w-75 mt-5 p-5">
                                 <h1>Get in Touch</h1>
                             <ul className="text-start list-unstyled">
-                                <li className="text-info"><i class="fas fa-map-marker-alt fs-2 "></i> MMCH gate oposite position,22</li>
-                                <li className="text-info"><i class="fas fa-phone-volume fs-2 my-5"></i> +24 123-456-7878</li>
-                                <li className="text-info"><i class="far fa-envelope fs-2" ></i> info@example.com</li>
+                                <li className="text-info"><i className="fas fa-map-marker-alt fs-2 "></i> MMCH gate oposite position,22</li>
+                                <li className="text-info"><i className="fas fa-phone-volume fs-2 my-5"></i> +24 123-456-7878</li>
+                                <li className="text-info"><i className="far fa-envelope fs-2" ></i> info@example.com</li>
                             </ul>
                             </div>
                         </div>

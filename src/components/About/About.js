@@ -21,8 +21,8 @@ const About = () => {
                     <div className="col-lg-6">
                         <div className="about-text text-start">
                             <p>About us</p>
-                            <h1>Our Qualified Doctor Are Here To Help Your Health</h1>
-                            <p>The Deenanath Mangeshkar Hospital is beautifully designed, having a central atrium with four wings built around it. It is a 800-bed hospital with 12 operation theaters, a sophisticatle in Pune. We are attention is given to the needs of th</p>
+                            <h1 className="mb-5 text-info">Our Qualified Doctor Are Here To Help Your Health</h1>
+                            <p className="fs-5 ">The Deenanath Mangeshkar Hospital is beautifully designed, having a central atrium with four wings built around it. It is a 800-bed hospital with 12 operation theaters, a sophisticatle in Pune. We are attention is given to the needs of thcentral atrium with four wings built around it. It is a 800-bed hospital with 12 operation theaters, a sophisticatle in Pune. We are attention is given to the needs of th</p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ const About = () => {
             </div>
 
             <div className="our-doctor py-5 ">
-                    <h1 className="mb-5">Our Doctor</h1>
+                    <h1 className="mb-5 text-primary fw-bold">Our Doctors</h1>
                     <div className="doc-data d-flex justify-content-around ">
                     <div className="div1">
                     <img src={doc1} alt="" />
@@ -49,7 +49,7 @@ const About = () => {
                     <p>Consultant</p>
                     </div>
                     <div className="div4">
-                    <img src={doc3} alt="" />
+                    <img src={doc4} alt="" />
                     <h5>Jessica Eve</h5>
                     <p>Consultant</p>
                     </div>
