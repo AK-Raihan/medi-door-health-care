@@ -41,8 +41,6 @@ function App() {
         <Route path="/doctor">
           <FindDoctor></FindDoctor>
         </Route>
-        
-
         <Route path="/depertment">
           <Depertment></Depertment>
         </Route>

@@ -13,7 +13,7 @@ const Services = () => {
         <div className="container my-5">
             <h5 className="text-info"> Our Services </h5>
             <h1> What We’re Offering</h1>
-            <div className="row row-cols-1 row-cols-md-3 g-4 ">
+            <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
                 {
                     services.map(service=><Service
                         key={service.code}

@@ -29,15 +29,14 @@ const Navbar = () => {
                     <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
             </ul>
-            <div className="d-flex">
-                <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                <button className="btn btn-outline-success me-2" type="submit" >Search</button>
+            <div className="d-flex justify-content-between">
+                <span className="me-3 text-success fs-4"> Hello <span className="text-info fw-bold">{user.displayName}</span> sir! </span>
 
                 {
                     user.email ?
-                        <button onClick={logOut}>logout</button>
+                        <button className="btn btn-info" onClick={logOut}>logout</button>
                         :
-                        <NavLink to="/login">Login</NavLink>}
+                        <NavLink to="/login" className="btn btn-info">Login</NavLink>}
             </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ const Register = () => {
         e.preventDefault()
         handleUserRegister(email, password)
         if(password.length<6){
-            setError('password must be six characters long')
+            setError('Password must be six characters long')
         }
     }
 
@@ -33,7 +33,6 @@ const Register = () => {
             backgroundImage: `url("https://images6.alphacoders.com/330/330563.jpg")` 
           }}>
 
-
         <div>
             <div className="row py-5">
             <h1 > Please Register</h1>
@@ -43,18 +42,19 @@ const Register = () => {
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Your name</label>
                     <input  type="text" className="form-control" placeholder=" name" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+
                 </div>
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
                     <input onChange={handleEmail}  type="email" className="form-control"  required placeholder="email" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+
                 </div>
                 <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
+                    <label for="exampleInputEmail1" className="form-label">Enter Password</label>
                     <input onChange={handlePassword}  type="password" className="form-control" required placeholder="password" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <h6 className="text-danger">{error}</h6>
                 </div>
+                <div id="emailHelp" className="form-text">We'll never share your data with anyone else.</div>
                 <div className="log-btn ">
                     <button className="btn btn-lg btn-info" onClick={handleRegister} type="submit"> <span><i class="fas fa-arrow-circle-right"></i></span> Register</button>
                 
