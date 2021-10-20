@@ -41,9 +41,9 @@ function App() {
         <Route path="/doctor">
           <FindDoctor></FindDoctor>
         </Route>
-        <Route path="/depertment/:serviceId">
+        <PrivateRoute path="/depertment/:serviceId">
           <Depertment></Depertment>
-        </Route>
+        </PrivateRoute>
 
         <Route path="/login">
           <Login></Login>
