@@ -41,7 +41,7 @@ function App() {
         <Route path="/doctor">
           <FindDoctor></FindDoctor>
         </Route>
-        <Route path="/depertment">
+        <Route path="/depertment/:serviceId">
           <Depertment></Depertment>
         </Route>
 
