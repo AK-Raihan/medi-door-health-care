@@ -22,6 +22,9 @@ const Register = () => {
                 </div>
                 <div className="log-btn d-flex justify-content-around">
                 <input type="submit" value="Register" />
+                <div>
+                <p>Already have an account</p> <Link to="/login">Please Login</Link>
+                </div>
                 </div>
             </form>
             <button  type="submit" class="btn btn-primary">Login with Google</button>
